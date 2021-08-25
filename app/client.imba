@@ -19,6 +19,11 @@ tag app
 		toggles.push({title: "Your title", content: "Your content"})
 		window.localStorage.setItem("toggles", JSON.stringify(toggles))
 	
+	def deleteAllToggles event
+		console.log event
+		toggles = []
+		window.localStorage.setItem("toggles", JSON.stringify(toggles))
+	
 	def downloadAPKG event
 		console.log event
 
@@ -36,7 +41,8 @@ tag app
 							<summary[fw: bold m: -.5em -.5em 0 p: .5em]> toggle.title
 							toggle.content
 				if toggles.length > 0
-					<div [d: flex jc: center p: 2rem]>
+					<div [d: flex jc: space-around p: 2rem]>
 						<button @click=downloadAPKG> "Download"
+						<button @click=deleteAllToggles> "Delete"
 
 imba.mount <app>
