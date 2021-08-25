@@ -1,4 +1,8 @@
-# Getting Started
+# toggles.2anki.net
+
+Simple web app to create flashcards from toggles.
+
+## Getting Started
 
 This project was bootstrapped with [imba-base-template](https://github.com/imba/imba-base-template).
 
